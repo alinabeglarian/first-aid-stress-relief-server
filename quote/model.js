@@ -4,7 +4,14 @@ const db = require('../db')
 const Quote = db.define(
   'Quote',
   {
-    quote: Sequelize.STRING
+    quoteText: {
+      type: Sequelize.STRING,
+      field: "quote_text",
+    },
+    quoteAuthor: {
+      type: Sequelize.STRING,
+      field: "quote_author",
+    }
   },
   {
     timestamps: false,

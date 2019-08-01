@@ -9,9 +9,9 @@ router.get(
     .findAll()
     .then((quotes) => {
       if (quotes.length === 0) {
-        res.status(404).send({ message: 'The are no images' })
+        res.status(404).send({ message: 'The are no quotes' })
       } else {
-        res.json(quotes)
+        res.json(quotes[Math.floor(Math.random()*quotes.length)])
       }
     })
     .catch(error => next(error))
