@@ -4,7 +4,7 @@ const Image = require('./model')
 const router = new Router()
 
 router.get(
-  '/images',
+  '/randomimage',
   (req, res, next) => { Image
     .findAll()
     .then((images) => {
