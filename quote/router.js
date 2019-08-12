@@ -29,4 +29,20 @@ router.post(
     .catch(error => next(error))
 )
 
+router.delete(
+  'quotes/:id',
+  (req, res, next) => {
+
+  const id = req.params.id
+
+  Quote
+    .findByPk(id)
+    .then(quote => quote.destroy({quote}) )
+    .then(quote => res
+      .status(200)
+      .json({message: 'Quote had succesfully been deleted'}))
+    .catch(error => next(error))
+  }
+)
+
 module.exports = router
