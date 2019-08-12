@@ -30,7 +30,7 @@ router.post(
 )
 
 router.delete(
-  'quotes/:id',
+  '/quotes/:id',
   (req, res, next) => {
 
   const id = req.params.id
@@ -40,7 +40,7 @@ router.delete(
     .then(quote => quote.destroy({quote}) )
     .then(quote => res
       .status(200)
-      .json({message: 'Quote had succesfully been deleted'}))
+      .json({message: 'Quote has succesfully been deleted'}))
     .catch(error => next(error))
   }
 )
