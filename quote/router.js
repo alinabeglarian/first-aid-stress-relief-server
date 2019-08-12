@@ -18,4 +18,15 @@ router.get(
   }
 )
 
+router.post(
+  '/quotes',
+  (req, res, next) => Quote
+    .create(req.body)
+    .then(quote => 
+      res
+        .status(201)
+        .json(quote))
+    .catch(error => next(error))
+)
+
 module.exports = router

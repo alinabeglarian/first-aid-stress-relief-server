@@ -18,4 +18,15 @@ router.get(
   }
 )
 
+router.post(
+  '/images',
+  (req, res, next) => Image
+    .create(req.body)
+    .then(image => 
+      res
+        .status(201)
+        .json(image))
+    .catch(error => next(error))
+)
+
 module.exports = router
