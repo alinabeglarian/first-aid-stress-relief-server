@@ -14,13 +14,9 @@
 * Sequelize
 
 ## Setup
-Please note that in order to run the server locally you must also start a Postgres container using the following commands
+Please note that in order to run the server locally run a Postgres container and connect to it using the following command:
 
-$ docker run \
-  --rm \
-  -e POSTGRES_PASSWORD=secret \
-  -p 5432:5432 \
-  postgres
+`$ docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=secret postgres`
   
 git clone
 npm install
