@@ -44,28 +44,28 @@ Make sure you have HTTPie installed by checking 'http --version' in the terminal
 
 ### Endpoints
 
-<base url> is either http://localhost:4000 for local development or https://first-aid-stress-relief-db.herokuapp.com/ for the deployed backend.
+`<base url>` is either http://localhost:4000 for local development or https://first-aid-stress-relief-db.herokuapp.com/ for the deployed backend.
 
 #### Quotes 
 
-* GET <base url>/randomquote
+* `GET <base url>/randomquote`
 
 Fetches one random quote from the database.
 
-* POST <base url>/quotes
+* `POST <base url>/quotes`
 
 Creates a new quote in the database.
 
-* DELETE <base url>/quotes/:id
+* `DELETE <base url>/quotes/:id`
 
 Deletes a quote by it's id from the database. 
 
 #### Images
 
-* GET <base url>/randomimage
+* `GET <base url>/randomimage`
 
 Fetches one random image from the database.
 
-* POST <base url>/images
+* `POST <base url>/images`
 
 Creates a new image in the database.
