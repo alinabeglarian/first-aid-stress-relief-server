@@ -9,6 +9,7 @@
 * [API](#api)
 
 ## Technologies used
+* Node.js
 * PostgreSQL
 * Express
 * Sequelize
